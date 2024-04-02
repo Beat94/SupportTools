@@ -1,11 +1,9 @@
 ﻿namespace SupportTools;
 
-public partial class App : Application
+public partial class Settings : Application
 {
-	public App()
+	public Settings()
 	{
 		InitializeComponent();
-
-		MainPage = new AppShell();
 	}
 }
