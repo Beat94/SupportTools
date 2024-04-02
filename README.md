@@ -3,6 +3,7 @@
 ## Planned functions
 - Support Answer Helper
 - Ticket-Tracker (manual usage)
+- ToDo-Tracker (maybe)
 
 ## Support Answer Helper
 There is planned, that it is possible to add, remove and edit comments.  
