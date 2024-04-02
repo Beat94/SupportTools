@@ -1,6 +1,6 @@
 ﻿namespace SupportTools;
 
-public partial class Settings : Application
+public partial class Settings : ContentPage
 {
 	public Settings()
 	{
