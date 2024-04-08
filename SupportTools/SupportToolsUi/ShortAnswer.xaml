@@ -9,7 +9,7 @@
             Spacing="25">
 
             <Label
-                Text="This is a ShortAnswer page"
+                Text="This is the ShortAnswer page"
                 Style="{StaticResource Headline}"
                 SemanticProperties.HeadingLevel="Level1" />
 
