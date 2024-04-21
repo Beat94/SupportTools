@@ -16,6 +16,7 @@
             <Button Text="Test Button"/>
             
             <!-- Do we need double Scrollview or is it better to use a Gridview first? -->
+            <!-- https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/scrollview?view=net-maui-8.0 -->
             <ScrollView>
                 <StackLayout>
                     <BindableLayout.ItemTemplate>
