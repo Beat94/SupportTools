@@ -13,34 +13,21 @@
                 Style="{StaticResource Headline}"
                 SemanticProperties.HeadingLevel="Level1" />
 
+            <Button Text="Test Button"/>
             
-
+            <!-- Do we need double Scrollview or is it better to use a Gridview first? -->
+            <ScrollView>
+                <StackLayout>
+                    <BindableLayout.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding TestName}"/>
+                            </StackLayout>
+                        </DataTemplate>
+                    </BindableLayout.ItemTemplate>
+                </StackLayout>
+            </ScrollView>
+            
         </VerticalStackLayout>
-
-        <ListView ItemsSource="{Binding ShortAnswers}">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                        <Grid Padding="10">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto" />
-                                <RowDefinition Height="Auto" />
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto" />
-                                <ColumnDefinition Width="Auto" />
-                            </Grid.ColumnDefinitions>
-                            <Label Grid.Row="1"
-                                    Grid.Column="1"
-                                    Text="{Binding Text}"
-                                    FontAttributes="Italic"
-                                    VerticalOptions="Start"/>
-                            <!--<Button >-->
-                        </Grid>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
     </ScrollView>
-
 </ContentPage>

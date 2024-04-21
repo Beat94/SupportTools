@@ -1,8 +1,8 @@
-internal class AnswerType
+public class AnswerType
 {
-    internal List<string> answerType = new List<string>();
+    public List<string> answerType = new List<string>();
 
-    internal AnswerType()
+    public AnswerType()
     {
         answerType.Add("empty");
     }

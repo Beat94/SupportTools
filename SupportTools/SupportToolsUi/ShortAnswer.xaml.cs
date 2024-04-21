@@ -1,19 +1,24 @@
-﻿namespace SupportTools;
+﻿using System.Collections.ObjectModel;
+
+namespace SupportTools;
 
 public partial class ShortAnswer : ContentPage
 {
-	ListView listView = new ListView();
+	ObservableCollection<Answer> shortAnswers = new ObservableCollection<Answer>();
 	
 	public ShortAnswer()
 	{
 		InitializeComponent();
+		shortAnswers.Add(new Answer("Test", null));
+		
+		//listView.SetBinding(ItemsView.ItemsSourceProperty, "ShortAnswers");
 	}
 
 	protected override void OnBindingContextChanged()
 	{
 		base.OnBindingContextChanged();
 
-		listView.SetBinding(ItemsView.ItemsSourceProperty, "ShortAnswers");
+		
 		// Add some function to fill list;
 		
 	}
