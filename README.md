@@ -14,8 +14,9 @@ Additional Options could be decide if username and date should be added into con
 This planned function should be only as additional helper to track tickets and decide which ticket should be answered next. 
 
 ## Helpful
-Helpful link for .Net MAUI development:
+Helpful link for .Net MAUI development:  
 https://learn.microsoft.com/de-de/dotnet/maui/tutorials/notes-app/?view=net-maui-8.0&tutorial-step=2  
 https://learn.microsoft.com/de-de/dotnet/maui/user-interface/controls/?view=net-maui-8.0  
 https://wellsb.com/csharp/maui/observablecollection-dotnet-maui  
-https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/scrollview?view=net-maui-8.0
+https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/scrollview?view=net-maui-8.0  
+https://learn.microsoft.com/en-us/dotnet/maui/xaml/fundamentals/mvvm?view=net-maui-8.0
