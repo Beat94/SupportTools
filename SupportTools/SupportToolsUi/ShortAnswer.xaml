@@ -13,22 +13,37 @@
                 Style="{StaticResource Headline}"
                 SemanticProperties.HeadingLevel="Level1" />
 
-            <Button Text="Test Button"/>
+            <Button Text="Test Button" Command="{Binding mc.addAnswers}"/>
+            
+            <Label Style="{StaticResource Headline}" Text="{Binding mc.TestString}"/>
             
             <!-- Do we need double Scrollview or is it better to use a Gridview first? -->
             <!-- https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/scrollview?view=net-maui-8.0 -->
-            <ScrollView>
-                <StackLayout>
-                    <BindableLayout.ItemTemplate>
-                        <DataTemplate>
-                            <StackLayout Orientation="Horizontal">
-                                <Label Text="{Binding TestName}"/>
+            <!--
+            -->
+            <ListView x:Name="answerListView" ItemsSource="{Binding mc.lolz}">
+                <ListView.ItemTemplate>
+                    <DataTemplate x:For="TestClass">
+                        <ViewCell>
+                            <StackLayout>
+                                <Label 
+                                    Style="{StaticResource Headline}" 
+                                    Text="{Binding Name}"/>
+                                <Label 
+                                    Style="{StaticResource Headline}" 
+                                    Text="{Binding Text2}"/>
                             </StackLayout>
-                        </DataTemplate>
-                    </BindableLayout.ItemTemplate>
-                </StackLayout>
-            </ScrollView>
-            
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+                      
+
+            <!-- Backend-Text -->
+            <Label  
+                Style="{StaticResource Headline}"  
+                Text="{Binding tc.Name}"/>
+
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

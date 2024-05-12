@@ -1,9 +1,11 @@
 public class AnswerType
 {
-    public List<string> answerType = new List<string>();
+    public List<string> answerTypeArray = new List<string>();
 
     public AnswerType()
     {
-        answerType.Add("empty");
+        answerTypeArray.Add("empty");
     }
+
+
 }
