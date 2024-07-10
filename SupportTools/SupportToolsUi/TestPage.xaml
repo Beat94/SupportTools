@@ -3,6 +3,49 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SupportTools.TestPage">
     <ScrollView>
-        <Label Text="Welcome to Testpage" />
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+
+            <Label
+                Text="This is the ShortAnswer page"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+
+            <Button Text="Test Button" x:Command="{Binding model.mc1.addAnswers}" />
+
+            <Label Style="{StaticResource Headline}" Text="{Binding mc.TestString}" />
+
+            <Label Style="{StaticResource Headline}" x:Text="{Binding model.mc1.TestString}" />
+            
+            <!-- Do we need double Scrollview or is it better to use a Gridview first? -->
+            <!-- https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/scrollview?view=net-maui-8.0 -->
+            <!--
+            -->
+            <ListView x:Name="answerListView" ItemsSource="{Binding model.mc1.lolz}">
+                <ListView.ItemTemplate>
+                    <DataTemplate x:For="TestClass">
+
+                        <ViewCell>
+                            <StackLayout>
+                                <Label 
+                                    Style="{StaticResource Headline}" 
+                                    Text="{Binding Name}"/>
+                                <Label 
+                                    Style="{StaticResource Headline}" 
+                                    Text="{Binding Text2}"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+                      
+
+            <!-- Backend-Text -->
+            <Label  
+                Style="{StaticResource Headline}"  
+                Text="{Binding tc.Name}"/>
+
+        </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

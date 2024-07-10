@@ -19,6 +19,11 @@
             Route="ShortAnswer" />
 
         <ShellContent
+            Title="TestPage"
+            ContentTemplate="{DataTemplate local:ShortAnswer}"
+            Route="TestPage"/>
+
+        <ShellContent
             Title="Settings"
             ContentTemplate="{DataTemplate local:Settings}"
             Route="Settings" />
